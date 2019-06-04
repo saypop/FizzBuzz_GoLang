@@ -17,11 +17,11 @@ func FizzBuzz(number int) string {
 }
 
 func TestFizzBuzz(t *testing.T) {
-  got := FizzBuzz(5)
-  want := "1\n2\nFizz\n4\nBuzz\n"
+  got := FizzBuzz(15)
+  want := "1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n"
 
   if got != want {
-    t.Errorf("FizzBuzz(5) \n got: \n%v \n want: \n%v", got, want)
+    t.Errorf("FizzBuzz(15) \n got: \n%v \n want: \n%v", got, want)
   }
 }
 
