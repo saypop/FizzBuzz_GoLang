@@ -8,19 +8,20 @@ import (
 func FizzBuzz(number int) string {
   result := ""
   for i := 1; i <= number; i++ {
-    if i%3 == 0 { result += "Fizz"}
-    if i%3 != 0 { result += strconv.Itoa(i) }
+    if i%3 == 0 { result += "Fizz" }
+    if i%5 == 0 { result += "Buzz" }
+    if i%3 != 0 && i%5 != 0 { result += strconv.Itoa(i) }
     result += "\n"
   }
   return result
 }
 
 func TestFizzBuzz(t *testing.T) {
-  got := FizzBuzz(3)
-  want := "1\n2\nFizz\n"
+  got := FizzBuzz(5)
+  want := "1\n2\nFizz\n4\nBuzz\n"
 
   if got != want {
-    t.Errorf("FizzBuzz(3) \n got: \n%v \n want: \n%v", got, want)
+    t.Errorf("FizzBuzz(5) \n got: \n%v \n want: \n%v", got, want)
   }
 }
 
