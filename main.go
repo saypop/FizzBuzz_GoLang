@@ -3,6 +3,7 @@ package main
 import (
   "strconv"
   "testing"
+  "fmt"
 )
 
 func FizzBuzz(number int) string {
@@ -26,7 +27,8 @@ func TestFizzBuzz(t *testing.T) {
 }
 
 func main() {
-  tests := []testing.InternalTest{{"TestFizzBuzz", TestFizzBuzz}}
-  matchAll := func(t string, pat string) (bool, error) { return true, nil }
-  testing.Main(matchAll, tests, nil, nil)
+  // tests := []testing.InternalTest{{"TestFizzBuzz", TestFizzBuzz}}
+  // matchAll := func(t string, pat string) (bool, error) { return true, nil }
+  // testing.Main(matchAll, tests, nil, nil)
+  fmt.Println(FizzBuzz(100))
 }
